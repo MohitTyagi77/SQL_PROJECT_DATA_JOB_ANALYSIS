@@ -26,20 +26,23 @@ NOTE: If you are having issues with permissions. And you get error:
 -- NOTE: This has been updated from the video to fix issues with encoding
 
 COPY company_dim
-FROM 'C:\Users\mohit\Desktop\sql\csv_files\company_dim.csv'
+FROM 'C:\Users\mohit\Desktop\SQL_PROJECT_DATA_JOB_ANALYSIS\csv_files\company_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 COPY skills_dim
-FROM 'C:\Users\mohit\Desktop\sql\csv_files\skills_dim.csv'
+FROM 'C:\Users\mohit\Desktop\SQL_PROJECT_DATA_JOB_ANALYSIS\csv_files\skills_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 COPY job_postings_fact
-FROM 'C:\Users\mohit\Desktop\sql\csv_files\job_postings_fact.csv'
+FROM 'C:\Users\mohit\Desktop\SQL_PROJECT_DATA_JOB_ANALYSIS\csv_files\job_postings_fact.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 COPY skills_job_dim
-FROM 'C:\Users\mohit\Desktop\sql\csv_files\skills_job_dim.csv'
+FROM 'C:\Users\mohit\Desktop\SQL_PROJECT_DATA_JOB_ANALYSIS\csv_files\skills_job_dim.csv'
 WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 
 select * from job_postings_fact limit 100;
+select * from company_dim limit 100;
+select * from skills_dim limit 100;
+select * from skills_job_dim limit 100;
